@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 
 // Middleware
-//app.use(cors());
+app.use(cors(['http://localhost:5173/',"https://red-bus-pied.vercel.app/"]));
 app.use(express.json());
 
 // MongoDB connection
