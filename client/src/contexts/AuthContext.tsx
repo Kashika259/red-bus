@@ -169,7 +169,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
       if (storedToken && !username) {
         try {
-          const response = await fetch('http://localhost:5000/api/auth/user', {
+          const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/user`, {
             headers: { Authorization: `Bearer ${storedToken}` },
           });
           if (!response.ok) {
